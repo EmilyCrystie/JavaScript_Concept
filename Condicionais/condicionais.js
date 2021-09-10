@@ -2,7 +2,10 @@ let namePilot = prompt("Informe seu nome")
 let initialVelocity = 0
 
 let atualVelocity = prompt("A que velocidade gostaria de chegar?")
-confirm(atualVelocity + " km/s" + "\nEsta é a velocidade que deseja?")
+let confirmVelocity = confirm(atualVelocity + " km/s" + "\nEsta é a velocidade que deseja?")
+if(confirmVelocity){
+    initialVelocity = atualVelocity
+}
 
 if (atualVelocity < 0){
     alert("Nave está parada. Considere partir e aumentar a velocidade.")

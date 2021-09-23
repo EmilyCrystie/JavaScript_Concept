@@ -5,7 +5,7 @@ let newSpaceship = ""
 
 for (let pos = 0; pos < spaceship.length; pos++) {  //pos = abreviação de position
     if(spaceship[pos] == character){
-        newSpaceship += newCharacter[pos]
+        newSpaceship += newCharacter
     } else {
         newSpaceship += spaceship[pos]
     } 

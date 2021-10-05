@@ -23,3 +23,8 @@ _4. While_
  - Fixação da tag script para "chamar" o arquivo JS
  - Fixação da utilização de == ao invés de usar apenas um = ao especificar um número
  - += para facilitar o cálculo e deixar o código mais limpo
+
+_5. For_
+ - Estrutura: _for(<variável>; <expressão>; <ação de controle>){
+                  <bloco de código>
+                  }

@@ -10,7 +10,7 @@ function speedUp(newVelocity) {
 }
 
 function slowDown(newVelocity) {
-   if (newVelocity>0) {
+   if (newVelocity > 0) {
         newVelocity - acceleration
    }
 }

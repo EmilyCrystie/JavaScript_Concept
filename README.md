@@ -1,5 +1,6 @@
 # JavaScript
  Anotações/Exercícios dos conceitos básicos de JavaScript
+ (https://projetoscrystie.notion.site/JavaScript-efe20977503e4ffc85fea91b7f59b7c3)
 
 ### 🤓 _**Aprendizado**_ 
 

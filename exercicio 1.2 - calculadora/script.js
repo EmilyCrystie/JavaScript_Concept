@@ -1,3 +1,7 @@
+/* Escreve um programa em javascript que permita inserir dois valores numéricos e então calcule o resultado das quatro operações básicas (soma, subtração, multiplicação e divisão).
+
+Após calcular os resultados o programa deve exibi-los na tela. */
+
 let numero1 = parseFloat(prompt("Insira o PRIMEIRO nº: "));
 let numero2 = parseFloat(prompt("Insira o SEGUNDO nº: "));
 

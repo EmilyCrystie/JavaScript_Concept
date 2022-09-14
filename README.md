@@ -1,6 +1,6 @@
 <div align="center"> 
  <h1> JavaScript Concept </h1>
- <p> Este espaço dá acesso às minhas anotações dos conceitos básicos de Lógica de Programação e JavaScript, obtidos com o treinamento Fullstack JavaScript do <a   href="https://go.hotmart.com/V68692158X" target="_blank">OneBitCode</a>, além de incrementos feitos conforme estudo a linguagem em outros canais. </p>
+ <p> Este espaço dá acesso às minhas anotações de Lógica de Programação e JavaScript, obtidos com o treinamento Fullstack JavaScript do <a   href="https://go.hotmart.com/V68692158X" target="_blank">OneBitCode</a>, além de incrementos feitos conforme estudo a linguagem em outros canais. </p>
  <br>
  <p> ➡️ <a href="https://projetoscrystie.notion.site/JavaScript-efe20977503e4ffc85fea91b7f59b7c3" target="_blank"> Acesso ao conteúdo no Notion </a>⬅️</p>
  

@@ -7,4 +7,28 @@
  ![image](https://user-images.githubusercontent.com/81563039/159782205-b979303c-2925-418c-937b-ec8377205b6e.png)
 </div>
 
+<h2> 📃 Sumário </h2>
+ <h3> Exercício 1 </h3>
+  <ul>
+   <li> Tipos de dados </li>
+   <li> Variáveis </li>
+   <li> Operadores e expressões </li>
+   <li> Recursos nativos do navegador </li>
+  </ul>
+  
+ <h3> Exercício 2 </h3>
+ <ul>
+  <li> Comparação de dados </li>
+  <li> Operadores Lógicos </li>
+  <li> Condicionais: <code>if</code> e <code>else</code> </li>
+ </ul>
+  
+  <h3> Exercício 3 </h3>
+  <ul>
+   <li> Tipos de dados </li>
+   <li> Variáveis </li>
+   <li> Operadores e expressões </li>
+   <li> Recursos nativos do navegador </li>
+  </ul>
+
 <h4 align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/emilycrystie/" target="_blank"> Emily Crystie <a>  😎. <h4>

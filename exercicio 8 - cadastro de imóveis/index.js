@@ -23,8 +23,42 @@ Escreva um programa em javascript que funcione como um cadastro de imóveis e at
         //mostruário
         //sair
 
+let mostruario = []
 
 do{
-    
+    opcao = prompt("Qtd. de imóveis cadastrados: " + mostruario.length + 
+    "\n\nDigite a opção desejada: " +
+    "\n1. Novo Imóvel" + 
+    "\n2. Mostruário" + 
+    "\n3. Sair")
 
-} while(opcao != 3)
+    switch (opcao){
+        case "1":
+            let imovel = {}
+
+            imovel.proprietario = prompt("Informe o nome do proprietário: ")
+            imovel.qtd_quarto = prompt("Quantos quartos esse imóvel possui?")
+            imovel.qtd_banheiro = prompt("E quantos banheiros?")
+            imovel.garagem = prompt("Este imóvel possui garagem? (sim/não)")
+
+            let cadastro =
+            "\n"+ "Proprietário: " + imovel.proprietario + "\nQuartos: " + imovel.qtd_quarto + 
+            "\nBanheiros: " + imovel.qtd_banheiro + 
+            "\nGaragem: " + imovel.garagem
+
+            mostruario.push(cadastro)
+            break;
+        case "2":
+            alert(mostruario)
+            break;
+        case "3":
+            alert("Encerrar programa")
+            break;
+        default:
+            alert("Informe uma opção válida")
+    }
+} while(opcao != "3")
+
+alert("Encerrando programa")
+
+

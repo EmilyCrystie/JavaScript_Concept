@@ -60,5 +60,3 @@ do{
 } while(opcao != "3")
 
 alert("Encerrando programa")
-
-

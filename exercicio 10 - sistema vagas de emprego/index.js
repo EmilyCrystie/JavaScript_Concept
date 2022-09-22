@@ -51,69 +51,147 @@ Este é o exercício de revisão do módulo, então aproveite para utilizar todo
 // arrays: salvar vagas
 // console.table: visualização todas as vagas
 
-let opcao = "";
-
-let vaga = {};
-
 let vagas = [];
+
+function listarVagas(){
+    let vagasDisponiveis = vagas.reduce(function(texto, vaga, id){
+        texto += id + ". "
+        texto += vaga.nomeVaga
+        texto += " / " + vaga.candidatos.length + " candidatos\n"
+        return texto
+    }, "")
+
+    if(vagasDisponiveis){
+        alert(vagasDisponiveis)
+    } else {
+        alert("Sem vagas disponíveis no momento!")
+    }
+}
+
+
+function criarVaga(){
+    let nomeVaga = prompt("Informe o nome da vaga:");
+    let descricao = prompt("Faça uma breve descrição da vaga:");
+    let dataLimite = prompt("Qual a data limite para inscrição nesta vaga? (DD/MM/AA)");
+
+    let confirma = confirm("Confirme os dados\n" +
+                            "\nVaga: " + nomeVaga +
+                            "\nDescrição: " + descricao +
+                            "\nPrazo inscrição: " + dataLimite);
+    // console.log(confirma)
+
+    if(confirma){
+        let vaga = {
+            nomeVaga,
+            descricao,
+            dataLimite, 
+            candidatos: []
+        }
+
+        vagas.push(vaga);
+
+        alert("Vaga inserida")
+    }
+    // console.log(vagas)
+}
+
+
+function visualizarVaga(){
+    let id = prompt("Informe o ID da vaga:")
+
+    if(id >= vagas.length || id < 0){
+        alert("ID não encontrado")
+        return          //função se encerra no return
+    }
+
+    let vaga = vagas[id]
+
+    let nomesCandidatos = vaga.candidatos.reduce(function(nomes, candidato){
+        return nomes + "\n - " + candidato
+    }, "")
+
+    alert("Dados da vaga selecionada\n" + 
+            "\nId: " + id +
+            "\nVaga: " + vaga.nomeVaga +
+            "\nDescrição: " + vaga.descricao +
+            "\nPrazo: " + vaga.dataLimite +
+            "\nQtd. Inscritos: " + vaga.candidatos.length +
+            "\nCandidatos: " + nomesCandidatos)
+}
+
+
+function inscreverCandidato(){
+    let candidato = prompt("Nome do candidato: ")
+    let id = prompt("Informe o ID da vaga desejada:")
+    let vaga = vagas[id]
+
+    let confirma = confirm("Confirme os dados\n" +
+                            "\nId: " + id +
+                            "\nVaga: " + vaga.nomeVaga +
+                            "\nDescrição: " + vaga.descricao +
+                            "\nPrazo inscrição: " + vaga.dataLimite);
+
+    if(confirma){
+        vaga.candidatos.push(candidato)
+
+        alert("Candidato(a) " + candidato + " inscrito(a)")
+    }
+}
+
+
+function excluirVaga(){
+    let id = prompt("Qual o ID da vaga que deseja excluir?")
+    let vaga = vagas[id]
+
+    let confirma = confirm("Confirme os dados\n" +
+                            "\nId: " + id +
+                            "\nVaga: " + vaga.nomeVaga +
+                            "\nDescrição: " + vaga.descricao +
+                            "\nPrazo inscrição: " + vaga.dataLimite);
+
+    if(confirma){
+        vagas.splice(id, 1)
+
+        alert("Vaga excluída")
+    }
+}
+
+
+let menu = "Bem vindo ao Sistema de Vagas\n" +
+            "\nDigite o nº da opção desejada:" +
+            "\n1. Vagas Disponíveis" +
+            "\n2. Cadastrar Vaga" +
+            "\n3. Detalhes da Vaga" +
+            "\n4. Inscrever na Vaga" +
+            "\n5. Excluir Vaga" +
+            "\n6. Sair";
 
 do{
 
-    opcao = prompt("Bem vindo ao Sistema de Vagas\n" +
-                    "\nDigite o nº da opção desejada:" +
-                    "\n1. Listar vagas disponíveis" +
-                    "\n2. Criar nova vaga" +
-                    "\n3. Visualizar vaga" +
-                    "\n4. Inscrever-se em uma vaga" +
-                    "\n5. Excluir vaga" +
-                    "\n6. Sair")
+    opcao = prompt(menu)
 
     switch (opcao) {
         case '1':
-            let confirma = confirm("hj é dia 22?");
-            console.log(confirma)
+            listarVagas()
             break;
         case '2':
-            alert(criarVaga());
+            criarVaga()
             break;
         case '3':
-            
+            visualizarVaga()
             break;
         case '4':
-            
+            inscreverCandidato()
             break;
         case '5':
-            
+            excluirVaga()
             break;
         case '6':
             alert("Encerrando programa")
             break;
         default:
-
+            alert("Informe uma opção válida")
             break;
     }
 
 }while(opcao != '6')
-
-
-function criarVaga(){
-    vaga.nomeVaga = prompt("Informe o nome da vaga:");
-    vaga.descricao = prompt("Faça uma breve descrição da vaga:");
-    vaga.dataLimite = prompt("Qual a data limite para inscrição nesta vaga?");
-
-    let confirma = confirm(vaga);
-    console.log(confirma)
-    if(confirma){
-        vagas.push(vaga);
-    }
-
-    console.log(vagas)
-    alert("inseri na lista")
-}
-
-// criar nova vaga
-    //nome da vaga
-    //descrição da vaga
-    //data limite
-    //confirmação das infos
-    //salvar

@@ -48,7 +48,7 @@ function escalar(){
     }
 }
 
-
+ 
 function remover(){
     //jogador a ser removido
     const camisa = document.getElementById('shirt').value
